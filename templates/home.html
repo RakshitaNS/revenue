@@ -1,0 +1,84 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Restaurant Revenue Based Prediction</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Enter the details to get the prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Enter Id</label>
+            <input type="text" id="Id" name="Id">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Enter Name</label>
+            <input type="text" id="Name" name="Name">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Franchise</label>
+            <select class="form-control" name="Franchise" placeholder="Enter the Franchise" required>
+                <option class="placeholder" selected disabled value="">Select Franchise</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Category</label>
+            <select class="form-control" name="Category" placeholder="Enter the Category" required>
+                <option class="placeholder" selected disabled value="">Select Category</option>
+                <option value="Asian">Asian</option>
+                <option value="Asian/Noodle">Asian/Noodle</option>
+                <option value="Bakery Cafe">Bakery Cafe</option>
+                <option value="BBQ">BBQ</option>
+                <option value="Burger">Burger</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Coffee Cafe">Coffee Cafe</option>
+                <option value="Family Casual">Family Casual</option>
+                <option value="Family Style">Family Style</option>
+                <option value="Frozen Desserts">Frozen Desserts</option>
+                <option value="Healthy">Healthy</option>
+                <option value="Italian/Pizza">Italian/Pizza</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Sandwich">Sandwich</option>
+                <option value="Seafood">Seafood</option>
+                <option value="Snack">Snack</option>
+                <option value="Sports Bar">Sports Bar</option>
+                <option value="Steak">Steak</option>
+                <option value="Varied Menu">Varied Menu</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">City</label>
+            <select class="form-control" name="City"
+                placeholder="Enter the City" required>
+                <option class="placeholder" selected disabled value="">Select the City</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Gurugram">Gurugram</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Noida">Noida</option>
+                <option value="Pune">Pune</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Enter Number Of Items</label>
+            <input type="text" id="No_Of_Item" name="No_Of_Item">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Enter Order Placed by customer in Lacs</label>
+            <input type="text" id="Order_Placed" name="Order_Placed">
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Revenue" required />
+        </div>
+    </form>
+    <h2>
+       THE revenue is {{results}}
+    </h2>
+   <body>
+</html>
