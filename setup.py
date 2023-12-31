@@ -17,7 +17,7 @@ def get_requirements(file_path:str)->List[str]:
     return requirements
 
 setup(
-name='FLASK',
+name='revenue',
 version='0.0.1',
 author='Rakshita',
 author_email='nsrakshita4@gmail.com',
