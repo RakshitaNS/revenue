@@ -1,4 +1,71 @@
 <html>
+    <!-- Start styling -->
+    <style>
+        input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          font-size: 20px;
+          background-color: lightcyan;
+        }
+        
+        input[type=submit] {
+          width: 100%;
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 20px;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+          font-size: 20px;
+        }
+        select {
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: white;
+            font-size: 30px;
+
+}
+        .form-label {
+            font-size: 30px;
+        }
+        .radio {
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        /* .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+}
+        .select:hover .dropdown {
+            display: block;
+} */
+        </style>
+        <body>
 <body>
     <div class="login">
        <h1>Restaurant Revenue Based Prediction</h1>
@@ -17,7 +84,13 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Franchise</label>
-            <select class="form-control" name="Franchise" placeholder="Enter the Franchise" required>
+            <!-- set the name attribute of each radio button to radAnswer to only allow 1 radio button to be selected. -->
+            <div class="radio">
+            <input type="radio" id="yes" name="radAnswer" value="Yes">
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="radAnswer" value="No">
+            <label for="no">No</label></div><br>
+            <!-- <select class="form-control" name="Franchise" placeholder="Enter the Franchise" required>
                 <option class="placeholder" selected disabled value="">Select Franchise</option>
                 <option value="Yes">
                     Yes
@@ -25,9 +98,9 @@
                 <option value="No">
                     No
                 </option>
-            </select>
+            </select> -->
         </div>
-        <div class="mb-3">
+        <div class="form-label">
             <label class="form-label">Category</label>
             <select class="form-control" name="Category" placeholder="Enter the Category" required>
                 <option class="placeholder" selected disabled value="">Select Category</option>
@@ -53,7 +126,7 @@
                 <option value="Varied Menu">Varied Menu</option>
             </select>
         </div>
-        <div class="mb-3">
+        <div class="form-label">
             <label class="form-label">City</label>
             <select class="form-control" name="City"
                 placeholder="Enter the City" required>
